@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Verjaardagsmysterie voor Stan</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      padding: 6rem 1rem;
+      line-height: 1.6;
+    }
+    h1 { color: #58a6ff; margin-bottom: 0.5rem; }
+    p.hint { color: #8b949e; margin-top: 0.25rem; }
+    p.helper { color: #9aa4b2; font-size: 0.95rem; margin-top: 2rem; }
+    code.cmd { background: #010409; padding: 6px 10px; border-radius: 6px; color: #3fb950; font-weight:700;}
+    .center { max-width: 720px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>Welkom, Stan...</h1>
+    <p>Het systeem wacht op jouw nieuwsgierigheid.</p>
+    <p class="hint">Tip: echte berichten verstoppen zich in het zicht — open de console 👀</p>
+
+    <p class="helper">Open Developer Tools (F12 of Ctrl+Shift+I), ga naar <em>Console</em> en volg de aanwijzingen.</p>
+    <p class="helper">Typ <code class="cmd">decodeMessage(secret)</code> in de console om het bericht te ontcijferen.</p>
+  </div>
+
+  <script>
+    const secret = "TGllZnN0ZSBTdGFuLAoKSWsgaG91IHN1cGVydmVlbCB2YW4gamUgZW4gaWsgYmVuIHrDsyBvbnR6ZXR0ZW5kIHRyb3RzIG9wIGFsbGVzIHdhdCBqZSBkb2V0IGVuIHdhdCBqZSBhbCBoZWJ0IGJlcmVpa3QuCk1hYXIgaWsgYmVuIG1pbnN0ZW5zIHpvIHRyb3RzIG9wIG9ucyBzYW1lbiDigJQgaG9lIHdlIGFsbGVzIHZvciBlbGthYXIga3JpZ2dlbiwgaG8gdmUgd2UgZWxrYWFyIHN0ZXVuZW4sIGVuIGhvZXZlZWwgdyBlbGthYXIgaWFuIGVsa2FhciBoZWJiZW4sIG9vayBhbCBiZXNlZmZlbiB3ZSBkYXQgbmlldCBhbHRpamQuCgpKaWogbWFha3QgaWVkZXJlIGRhZyBlZW4gc3R1a2plIG1vb2llciwgZ2V3b29uIGRvb3Igd2llIGplIGJlbnQuCgpKayB3ZW5zIGplIGVlbiBoZWxlIGZpam5lIDIzZSB2ZXJqYWFyZGFnLCBlbiBvcCBub2cgdmVsZSBnZWx1a2tpZ2UgamFyZW4gc2FtZW4g8J+YgCDwn5iA CkFsbGUgbGllZmRlIHZhbiBtaWosIE5hb21p";
+
+    function decodeMessage(encoded) {
+      try {
+        const decoded = atob(encoded);
+        console.log("%c--------------------------------------------------", "color:#586e75");
+        console.log("%cBericht voor Stan:", "color:#58a6ff; font-weight:700");
+        console.log("%c" + decoded, "color:#c9d1d9");
+        console.log("%c--------------------------------------------------", "color:#586e75");
+
+        console.log("%cDe code gekraakt, dat ging niet traag,", "color:#f6c177");
+        console.log("%cmijn slimme held met gouden maag!", "color:#f6c177");
+        console.log("%cGeen script, geen bug, maar iets dat bakt —", "color:#f6c177");
+        console.log("%ckijk in de keuken, daar wordt iets knapperigs gemaakt 😋🔥", "color:#f6c177");
+
+        // wacht nu 2 minuten (120000 milliseconden)
+        setTimeout(() => {
+          console.log("%c", "color:#000");
+          console.log("%cDacht je dat het al voorbij was? 😏", "color:#a5d6ff; font-style:italic;");
+          console.log("%cEr schuilt nog iets meer warmte in dit verhaal...", "color:#a5d6ff;");
+          console.log("%cJe vond de hitte, je deed het goed,", "color:#f6c177");
+          console.log("%cmaar warmte komt niet enkel van wat je eten doet.", "color:#f6c177");
+          console.log("%cAls kou je zoekt en wind je plaagt,", "color:#f6c177");
+          console.log("%cvind dan wat jou straks behaagt.", "color:#f6c177");
+        }, 120000);
+
+        return decoded;
+      } catch (e) {
+        console.error("Er ging iets mis bij het ontcijferen!");
+      }
+    }
+
+    console.log("%cToegang verleend 🔓", "color:#58a6ff; font-size:16px;");
+    console.log("%cOm het bericht te zien, typ:", "color:#8b949e");
+    console.log("%cdecodeMessage(secret)", "color:#3fb950; font-weight:bold;");
+    console.log("%c(En lees goed wat er daarna gebeurt... 😉)", "color:#f0a500");
+  </script>
+</body>
+</html>
